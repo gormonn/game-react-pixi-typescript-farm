@@ -1,0 +1,1 @@
+export type RectangleProps = {x: number, y: number, color: number};
