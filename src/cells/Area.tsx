@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useObserver } from 'mobx-react-lite'
+import { useObserver, useLocalStore } from 'mobx-react-lite'
 import { ACP, ACPProps } from './utils'
 import Cell from './Cell'
 import { AreaStore } from '../store/area'
@@ -9,8 +9,9 @@ const Area = (props: ACPProps) => {
     const [cellIsHover, hoverCell] = useState('');
     const [cellIsSelect, selectCell] = useState('');
 
+    const store = useLocalStore(AreaStore);
+    console.log({store});
     const Cells = areaOfCells.map(({cellKey, ...params}) => {
-        console.log(AreaStore.slice());
         const isHover = (cellIsHover === cellKey) ? true : false;
         const isSelect = (cellIsSelect === cellKey) ? true : false;
         // const cellState = AreaStore.find((item) => item.id === cellKey);

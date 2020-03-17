@@ -1,4 +1,4 @@
-import { observable } from "mobx"
+import { observable, computed } from "mobx"
 
 const CellState = {
     Empty: 0,
@@ -26,3 +26,13 @@ export const AreaStore = observable([
     {id: '1-1', state: 0},
     {id: '1-2', state: 0}
 ])
+
+
+// export class AreaStore {
+//     @observable price = 0
+//     @observable amount = 1
+
+//     @computed get total() {
+//         return this.price * this.amount
+//     }
+// }

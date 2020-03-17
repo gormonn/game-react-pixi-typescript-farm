@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "experimentalDecorators": true,
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,8 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "experimentalDecorators": true
+    "jsx": "react"
   },
   "include": [
     "src"
