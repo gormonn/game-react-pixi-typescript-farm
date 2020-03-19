@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'mobx-react';
-import './index.css';
+import { RootStore } from './store/rootStore'
 import App from './App';
-import {RootStore} from './store/rootStore'
 import * as serviceWorker from './serviceWorker';
+import './index.css';
 
 render(
     <Provider rootStore={new RootStore()}>
